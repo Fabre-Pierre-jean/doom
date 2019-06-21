@@ -1,0 +1,52 @@
+
+.head{
+    margin-top: 150px;
+}
+
+.barLife{
+    height: 150px;
+    position:absolute;
+    top:820px;
+}
+
+.bord{
+    border:3px solid black;
+}
+
+.fondEnnemi{
+    width:50px;
+    height:102px;
+    background-color: red;
+}
+
+.ennemi1{
+    background-image: url(images/mechant_boss/monstre_base.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ligne{
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:300px;
+}
+
+.colonne{
+    display:grid;
+    left:400px;
+}
+
+body{
+    background-image: url(images/map/map02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fond1{
+    background-color:lightslategrey;
+}
+
+.arm{
+    margin-top:159px;
+}

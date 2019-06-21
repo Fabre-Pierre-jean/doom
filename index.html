@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>DOOMCLICKER</title>
+    </head>
+    <body>
+        <!-------------------------------  haut de page ---------------------->    
+                <div class="row fond1">
+                <div class="col-2 bord">
+                    <p class="text-center">vie ennemis :</p> 
+                    <p id="mechantVie" class="text-center">100</p>
+                </div>
+                <div class="col-10 bord">
+                    <h1 class="text-center">The Doom-Clicker</h1>
+                    <p class="text-center">le jeu qui rend accro.....</p>
+                </div>
+                </div>
+        <!------------------------- container playgames-->
+        <div class="container fond">
+            <!---------------------------ligne apparition ennemi------------------>
+            <div class="games head">
+                <div class="ligne row justify-content-center">
+                    <div class="col-2  bord fondEnnemi" id="mechant1">
+
+                    </div>
+                    <div class="col-2 bord ennemi1" id="mechant2">
+
+                    </div>
+                    <div class="col-2 bord fondEnnemi" id="mechant3">
+
+                    </div>
+                    <div class="col-1 colonne bord">
+                        <input type="button" id="pistolet" value="pistolet">
+                        <input type="button" id="pompe"  value="pompe">
+                        <input type="button" id="ak47"   value="ak47">
+                        <input type="button" id="bazooka" value="bazooka">
+                        <input type="button" id="grenade"  value="grenade"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------------------------- zone arme    ----------------->
+            <div class="row justify-content-center">
+                <div class="col-2 arm" id="arme">
+                    <img src="images/armes/1ere arme.png">
+                </div>
+            </div>
+        
+        <!------------------------------  barre du player --------------------->
+        <div class="barLife container-fluid">
+            <div class="row fond1">
+                <div class="col-2 bord">
+                    <p>score :</p>
+                    <p id="playerScore">0</p>
+                </div>
+                <div class="col-2 bord">
+                    <p>santè :</p>
+                    <p id="playerVie">100</p>
+                </div>
+                <div class="col-2 bord">
+                    <img src="images/visage_vie.gif" alt="tete player" style="width:100px; height:100px;">
+                </div>
+                <div class="col-2 bord">
+                    <p>vies :</p>
+                    <p id="nbVie">3</p>
+                </div>
+                <div class="col-2 bord">
+                    <p>Argent :</p>
+                    <p id="playerGain bord">0</p>
+                </div>
+                <div class="col-2 bord">
+                    <p>Armes</p>
+                    <p id="iconeArme"></p>
+                </div>
+            </div>
+        </div>
+        <!-------------------------   javascript------------------->
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
