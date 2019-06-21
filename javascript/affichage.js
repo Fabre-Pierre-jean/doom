@@ -15,8 +15,8 @@ function zoomin(){
             myImg.style.width= "40px";
             myImg.style.height= "45px" ;          
 		} else{
-            myImg.style.height = (currHeight + 50) + "px";
-            myImg.style.width = (currWidth + 25) + "px";
+            myImg.style.height = (currHeight + 40) + "px";
+            myImg.style.width = (currWidth + 20) + "px";
 		} 
 }
 
@@ -24,6 +24,6 @@ setInterval("zoomin()",1000);
 
 function changePerso(){
     //renommer nom des mechant en 1.gif 2.gif 3.gif et mettre random entre 1 et 3
-    myImg.src="../images/mechant_boss/mechant.gif";
+    myImg.src="images/mechant_boss/mechant.gif";
 }
 
