@@ -47,19 +47,16 @@ var player_vie = 100;
 
 function mechantvie() 
 {
-	var currHeight = myImg.clientHeight;
-    var currWidth = myImg.clientWidth;
-    var debHeight = 252;
-    var debWidth = 200;
+	
 	if(mechant_vie==0)
 	{
-		affichageviemechant.innerHTML = mechant_vie;
-		mechant_vie = 100;
-           reinit()
+        reinit()
+        mechant_vie = 100;
+		affichageviemechant.innerHTML = mechant_vie + " %";   
 	}
 	else
 	{
-    affichageviemechant.innerHTML = mechant_vie;
+    affichageviemechant.innerHTML = mechant_vie+ " %";
     mechant_vie = mechant_vie-5;
     }
 }
@@ -69,18 +66,19 @@ function mechantdegat()
 {
     if(player_vie<=0)
     {
-        affichagevieplayer.innerHTML = player_vie;
+        reinit()
+        affichagevieplayer.innerHTML = player_vie+ " %";;
 		player_vie = 100;
 		
     }
     else
     {
-    	affichagevieplayer.innerHTML = player_vie;
-        player_vie = player_vie-10;
+    	affichagevieplayer.innerHTML = player_vie+ " %";;
+        player_vie = player_vie-5;
     }
 }
 
-setInterval("mechantdegat()",1000);
+setInterval("mechantdegat()",500);
 
 
 //avancement mechant
@@ -91,8 +89,10 @@ function zoomin(){
     var currWidth = myImg.clientWidth;
     var debHeight = 252;
     var debWidth = 200;
-		if(currHeight >= 500){ //a la place de la on met if vie_monstre == 0 OU currHeight >=750
-            reinit()          
+		if(currHeight >= 500){ 
+            reinit()
+            
+            
 		} else{
             myImg.style.height = (currHeight + 40) + "px";
             myImg.style.width = (currWidth + 20) + "px";
@@ -102,13 +102,21 @@ function zoomin(){
 setInterval("zoomin()",1000);
 
 function reinit(){
-    myImg.style.height= (debHeight) + "px"
-    myImg.style.width= (debWidth) + "px"
-    myImg.style.display="flex";
-    myImg.style.justifyContent="center";
-    myImg.style.width= "40px";
-    myImg.style.height= "45px" ;  
-    changePerso()
+    player_vie = 100;
+    mechant_vie = 100;
+    var currHeight = myImg.clientHeight;
+    var currWidth = myImg.clientWidth;
+    var debHeight = 252;
+    var debWidth = 200;
+        myImg.style.height= (debHeight) + "px"
+        myImg.style.width= (debWidth) + "px"
+        myImg.style.display="flex";
+        myImg.style.justifyContent="center";
+        myImg.style.width= "40px";
+        myImg.style.height= "45px" ;  
+        changePerso()
+        vieMechant = 100;
+        affichageviemechant.innerHTML=vieMechant + " %"
 }
 
 
