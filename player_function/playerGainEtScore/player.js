@@ -27,6 +27,19 @@ function cliqueMechant2(){
 		gain.innerHTML = comptGain;
 		VieMechant = 3;
 		console.log ('VieMechant = ' +VieMechant);
+	}/*-----------------------------------------------------------------*/
+	/*--------------------Pour afficher les equipements-------------*/
+	if(comptGain >= acheterPistolet ){
+		pistolet.style.opacity = "1";
+	}
+	if(comptGain >= acheterPompe){
+		pompe.style.opacity = "1";
+	}
+	if(comptGain >= acheterAk47){
+		ak47.style.opacity = "1";
+	}
+	if(comptGain >= acheterBazooka){
+		bazooka.style.opacity = "1";
 	}
 }
 
