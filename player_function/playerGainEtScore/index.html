@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
 	<title>Playeur Fuction gain et point</title>
+	<link rel="stylesheet" type="text/css" href="player.css">
 </head>
 <body>
 	<div id="mechant2">
@@ -16,6 +17,13 @@
 			<div id="playerScore">0</div>
 		</div>
 	</div>
+	<div> Equipement
+		<input id="pistolet" type="button" value="Pistolet" onclick="arme1()">
+		<input id="pompe" type="button" value="Fusil à Pompe" onclick="arme2()">
+		<input id="ak47" type="button" value="AK47" onclick="arme3()">
+		<input id="bazooka" type="button" value="Bazooka" onclick="arme4()">
+	</div>
 </body>
 <script type="text/javascript" src="player.js"></script>
+<script type="text/javascript" src="../equipement/equipement.js"></script>
 </html>
