@@ -8,16 +8,38 @@ position:absolute;
 top:820px;
 }
 
-.bord{
-border:3px solid black;
-}
+  
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+	flex: 1;
+	justify-content: center;
+  }
+  
+  .orange-column {
+    background-color: orange;
+	height: 200px;
+  }
+  
+  .blue-column img {
+	  margin-left: 450px;
+    width: 400px;
+    height: 100px;
+  }
+  
 
-.fondEnnemi{
-width:50px;
-height:102px;
-background-color: red;
-}
 
+.some-page-wrapper{
+    display: inline;
+}
 
 
 .ligne{
@@ -51,7 +73,7 @@ background-repeat: no-repeat;
 
 #mechantImg{
 	display: flex;
-	margin-top: -100px;
+	margin-top: -200px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 40px;
