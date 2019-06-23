@@ -22,8 +22,20 @@ function zoomin(){
 
 setInterval("zoomin()",1000);
 
+function getRandomMechant(){
+      var letters = '123';
+      var color = 'images/mechant_boss/';
+      for (var z = 0; z < 1; z++ ) {
+          color += letters[Math.floor(Math.random() * 3)] + ".gif";
+      }
+      return color;
+  }
+  
+
 function changePerso(){
     //renommer nom des mechant en 1.gif 2.gif 3.gif et mettre random entre 1 et 3
-    myImg.src="images/mechant_boss/mechant.gif";
+      myImg.src=getRandomMechant();
+    
+    //myImg.src="images/mechant_boss/mechant.gif";
 }
 

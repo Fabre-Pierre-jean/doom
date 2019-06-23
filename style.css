@@ -3,38 +3,40 @@ head{
 }
 
 .barLife{
-height: 150px;
-position:absolute;
-top:820px;
+	height: 150px;
+	position:absolute;
+	top:820px;
 }
 
-  
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
+
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
 	flex: 1;
 	justify-content: center;
-  }
-  
-  .orange-column {
-    background-color: orange;
-	height: 200px;
-  }
-  
-  .blue-column img {
-	  margin-left: 450px;
-    width: 400px;
-    height: 100px;
-  }
-  
+}
+
+.vieMechant p{
+	margin-top: 200px;
+	text-align: center;
+	font-family: "Bangers";
+	
+}
+
+span{
+	color: red;
+	font-size: 50px;
+}
+
+.blue-column img {
+	margin-top: -500px;
+	margin-left: 600px;
+	width: 400px;
+	height: 150px;
+}
+
 
 
 .some-page-wrapper{
@@ -73,7 +75,7 @@ background-repeat: no-repeat;
 
 #mechantImg{
 	display: flex;
-	margin-top: -200px;
+	margin-top: -332px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 40px;
