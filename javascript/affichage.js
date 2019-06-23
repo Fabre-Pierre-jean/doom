@@ -1,4 +1,4 @@
-//Mechant de base
+//avancement mechant
 
 var myImg = document.getElementById("mechantImg");
 function zoomin(){
@@ -23,12 +23,12 @@ function zoomin(){
 setInterval("zoomin()",1000);
 
 function getRandomMechant(){
-      var letters = '123';
-      var color = 'images/mechant_boss/';
+      var nbre = '123';
+      var image = 'images/mechant_boss/';
       for (var z = 0; z < 1; z++ ) {
-          color += letters[Math.floor(Math.random() * 3)] + ".gif";
+          image += nbre[Math.floor(Math.random() * 3)] + ".gif";
       }
-      return color;
+      return image;
   }
   
 

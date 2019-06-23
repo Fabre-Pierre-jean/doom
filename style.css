@@ -22,12 +22,14 @@ head{
 	margin-top: 200px;
 	text-align: center;
 	font-family: "Bangers";
+	color: red;
+	font-size: 30px;
 	
 }
 
 span{
 	color: red;
-	font-size: 50px;
+	font-size: 35px;
 }
 
 .blue-column img {
@@ -58,10 +60,18 @@ position: absolute;
 }
 
 body{
-background-image: url(images/map/map02.png);
+background-image: url(images/map/map02_modifié.png);
 background-repeat: no-repeat;
 	background-size: cover;
 	background-position-y: -200px;
+}
+
+audio{
+	opacity:0;
+}
+
+audio:hover{
+	opacity: 1;
 }
 
 .fond1{
@@ -81,3 +91,12 @@ background-repeat: no-repeat;
 	width: 40px;
 	height: 45px;
   }
+
+/*player.css*/
+
+#pistolet, #pompe, #ak47, #bazooka{
+	opacity: 0.2;
+}
+
+
+

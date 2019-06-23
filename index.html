@@ -10,6 +10,7 @@
 <title>DOOMCLICKER</title>
 </head>
 <body>
+
 <!-------------------------------  haut de page ---------------------->  
        
             <div class='vieMechant'>
@@ -30,18 +31,15 @@
 <div class="col-2  " id="mechant1">
 
 </div>
-<div class="col-2 " id="mechant2">
-<img id="mechantImg" src="images/mechant_boss/monstre_base.gif">
-</div>
+<div><img id="mechantImg"  src="images/mechant_boss/monstre_base.gif"></div>
 <div class="col-2 " id="mechant3">
 
 </div>
 <div class="col-1 colonne bord">
-<input type="button" id="pistolet" value="pistolet">
-<input type="button" id="pompe"  value="pompe">
-<input type="button" id="ak47"   value="ak47">
-<input type="button" id="bazooka" value="bazooka">
-<input type="button" id="grenade"  value="grenade"> 
+        <input id="pistolet" type="button" value="Pistolet" onclick="arme1()">
+        <input id="pompe" type="button" value="Fusil à Pompe" onclick="arme2()">
+        <input id="ak47" type="button" value="AK47" onclick="arme3()">
+        <input id="bazooka" type="button" value="Bazooka" onclick="arme4()">
 </div>
 </div>
 </div>
@@ -55,37 +53,40 @@
 
 <!------------------------------  barre du player --------------------->
 <div class="barLife container-fluid">
-<div class="row fond1">
-<div class="col-2 bord">
-<p>score :</p>
-<p id="playerScore">0</p>
-</div>
-<div class="col-2 bord">
-<p>santè :</p>
-<p id="playerVie">100</p>
-</div>
-<div class="col-2 bord">
-<img src="images/visage_vie.gif" alt="tete player" style="width:200px; height:100px;">
-</div>
-<div class="col-2 bord">
-<p>vies :</p>
-<p id="nbVie">3</p>
-</div>
-<div class="col-2 bord">
-<p>Argent :</p>
-<p id="playerGain bord">0</p>
-</div>
-<div class="col-2 bord">
-<p>Armes</p>
-<p id="iconeArme"></p>
-</div>
-        </div>
+        <div class="row fond1">
+                <div class="col-2 bord">
+                        <p>score :</p>
+                        <p id="playerScore">0</p>
                 </div>
-                        <!-------------------------   javascript------------------->
-                        <script src="javascript/affichage.js"></script>
-                                <script src="main.js"></script>
-                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                                                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-                                                        </body>
+                <div class="col-3 bord">
+                        <p>santè :</p>
+                        <p id="playerVie">100</p>
+                </div>
+                <div class="col-2 bord">
+                        <img src="images/visage_vie.gif" alt="tete player" style="width:200px; height:100px;">
+                </div>
+                <div class="col-1 bord">
+                        <p>vies :</p>
+                        <p id="nbVie">3</p>
+                </div>
+                <div class="col-1 bord">
+                        <p>Argent :</p>
+                        <p id="playerGain bord">0</p>
+                </div>
+                <div class="col-2 bord">
+                        <p>Armes</p>
+                        <p id="iconeArme"></p>
+                </div>
+        </div>
+</div>
+<audio controls autoplay>
+        <source src="musique/music to doom level 1-BEECC3xoCVU.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+</audio>
+<!-------------------------   javascript------------------->
+<script src="/javascript/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </html>

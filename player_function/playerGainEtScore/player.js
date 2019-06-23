@@ -1,3 +1,5 @@
+//PLAYER
+
 var mechant2 = document.getElementById('mechant2');
 var gain = document.getElementById('playerGain');
 var score = document.getElementById('playerScore');
