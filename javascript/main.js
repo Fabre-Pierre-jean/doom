@@ -55,13 +55,7 @@ function mechantvie()
 	{
 		affichageviemechant.innerHTML = mechant_vie;
 		mechant_vie = 100;
-            myImg.style.height= (debHeight) + "px"
-            myImg.style.width= (debWidth) + "px"
-            myImg.style.display="flex";
-            myImg.style.justifyContent="center";
-            myImg.style.width= "40px";
-			myImg.style.height= "45px" ;  
-			changePerso()
+           reinit()
 	}
 	else
 	{
@@ -98,13 +92,7 @@ function zoomin(){
     var debHeight = 252;
     var debWidth = 200;
 		if(currHeight >= 500){ //a la place de la on met if vie_monstre == 0 OU currHeight >=750
-            changePerso()
-            myImg.style.height= (debHeight) + "px"
-            myImg.style.width= (debWidth) + "px"
-            myImg.style.display="flex";
-            myImg.style.justifyContent="center";
-            myImg.style.width= "40px";
-            myImg.style.height= "45px" ;          
+            reinit()          
 		} else{
             myImg.style.height = (currHeight + 40) + "px";
             myImg.style.width = (currWidth + 20) + "px";
@@ -112,6 +100,17 @@ function zoomin(){
 }
 
 setInterval("zoomin()",1000);
+
+function reinit(){
+    myImg.style.height= (debHeight) + "px"
+    myImg.style.width= (debWidth) + "px"
+    myImg.style.display="flex";
+    myImg.style.justifyContent="center";
+    myImg.style.width= "40px";
+    myImg.style.height= "45px" ;  
+    changePerso()
+}
+
 
 function getRandomMechant(){
       var nbre = '123';
