@@ -2,6 +2,7 @@ img{
 	outline:0;
 	text-decoration: none;
 }
+
 head{
 	margin-top: 150px;
 }
@@ -36,7 +37,7 @@ span{
 	font-size: 35px;
 }
 
-.blue-column img {
+.blue-column img { /* logo DOOM*/
 	margin-top: -500px;
 	margin-left: 600px;
 	width: 400px;
