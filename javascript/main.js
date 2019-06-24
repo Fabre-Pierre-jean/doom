@@ -17,14 +17,14 @@ function cliqueMechant2(){
 
 	/*--------------------Gain pour chaqueClique--------------------------*/
 	if(VieMechant >= 5){//le vie ennemi 100%
-		VieMechant-=5;
+        VieMechant = VieMechant-5;
+		
 		console.log('VieMechant = ' +VieMechant);
 		comptGain++;
 		console.log('gain = ' +comptGain)
 		gain.innerHTML = comptGain;
 	}/*-------------------Gain apres avoir tuer le mechant---------------*/
 	else if (VieMechant == 0){
-		comptGain = parseInt(comptGain) + parseInt(mechantMort);
 		console.log('comptGain = comptGain + mechantMort = ' +comptGain);
 		console.log('score = ' +comptScore);
 		gain.innerHTML = comptGain;
@@ -57,18 +57,18 @@ var player_vie = 100;
 function mechantvie() 
 {
 	
-	if(VieMechant==0)
+	if(VieMechant<5)
 	{
 
         reinit()
         VieMechant = 100;
-		affichageviemechant.innerHTML = VieMechant + " %";   
+        affichageviemechant.innerHTML = VieMechant + " %"; 
+		comptGain = parseInt(comptGain) + parseInt(mechantMort);
 	}
 	else
 	{
         
     affichageviemechant.innerHTML = VieMechant+ " %";
-    VieMechant = VieMechant-5;
     cliqueMechant2()
     }
 }
