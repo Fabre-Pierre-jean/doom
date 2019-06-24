@@ -92,10 +92,10 @@ var pompe = document.getElementById('pompe');
 var ak47 = document.getElementById('ak47');
 var bazooka = document.getElementById('bazooka');
 var arme_change = document.getElementById("arme_change");
-var acheterPistolet = 50;/*--------------Initialisation des coûts des armes----------------*/
-var acheterPompe = 100;/*--------------Initialisation des coûts des armes----------------*/
-var acheterAk47 = 150;/*--------------Initialisation des coûts des armes----------------*/
-var acheterBazooka= 300;/*--------------Initialisation des coûts des armes----------------*/
+var acheterPistolet = 20;/*--------------Initialisation des coûts des armes----------------*/
+var acheterPompe = 30;/*--------------Initialisation des coûts des armes----------------*/
+var acheterAk47 = 40;/*--------------Initialisation des coûts des armes----------------*/
+var acheterBazooka= 100;/*--------------Initialisation des coûts des armes----------------*/
 function arme1(){
 	if(comptGain < acheterPistolet){
 		alert('Vous n\'avez pas asser d argent');
@@ -106,7 +106,7 @@ function arme1(){
         gain.innerHTML = comptGain;
         iconeArme.src="../images/armes/armes_animé/pistolet.gif";
         arme_change.src="../images/armes/armes_animé/pistolet.gif";
-        gain.innerHTML = comptGain;
+        
 	}
 }/*----------------------fonction pour pouvoir gagner les armes---------------------------------*/
 function arme2(){
@@ -130,11 +130,10 @@ function arme3(){
 	}
 	else if(comptGain > acheterAk47){
 		comptGain = comptGain - acheterAk47;
-		console.log('comptGain = ' +comptGain);
         gain.innerHTML = comptGain;
-        iconeArme.src="../images/armes/armes_animé/gateline.gif";
-        arme_change.src="../images/armes/armes_animé/gateline.gif";
-		
+        iconeArme.src="../images/armes/mitraillette_icones.gif";
+        arme_change.src="../images/armes/ak.png";
+       
 	}
 }/*----------------------fonction pour pouvoir gagner les armes---------------------------------*/
 function arme4(){
@@ -143,12 +142,10 @@ function arme4(){
 		bazooka.style.opacity="0.2";
 	}
 	else if(comptGain > acheterBazooka){
-		comptGain = comptGain - acheterbazooka;
-		console.log('comptGain = ' +comptGain);
+		comptGain = comptGain - acheterBazooka;
         gain.innerHTML = comptGain;
-        iconeArme.src="../images/armes/armes_animé/pistolet.gif";
-        arme_change.src="../images/armes/armes_animé/pistolet.gif";
-        arme_anime.onclick=anime_pistolet;
+        iconeArme.src="../images/armes/bazooka.gif";
+        arme_change.src="../images/armes/bazooka-2.png";
 		
 	}
 }/*----------------------fonction pour pouvoir gagner les armes---------------------------------*/
