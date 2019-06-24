@@ -108,8 +108,6 @@ function zoomin(){
     var debWidth = 200;
 		if(currHeight >= 500){ 
             reinit()
-            
-            
 		} else{
             myImg.style.height = (currHeight + 40) + "px";
             myImg.style.width = (currWidth + 20) + "px";
