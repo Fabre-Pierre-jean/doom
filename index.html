@@ -27,12 +27,13 @@
                 <div class="ligne row justify-content-center">
                         <div class="col-2  " id="mechant1">
                         </div>
-                        <div>
+                        <div id="arme_anime">
                                 <img id="mechantImg"  src="images/mechant_boss/monstre_base.gif" onclick=start()>
                         </div>
                         <div class="col-2 " id="mechant3">
 
                         </div>
+                        
                         <div class="col-1 colonne">
                                 <input id="pistolet" type="button" value="Pistolet" onclick="arme1()">
                                 <input id="pompe" type="button" value="Fusil à Pompe" onclick="arme2()">
@@ -45,7 +46,7 @@
 <!----------------------------- zone arme    ----------------->
         <div class="row justify-content-center">
                 <div class="col-2 arm" id="arme">
-                <img src="images/armes/1ere arme.png">
+                <img id="arme_change" src="images/armes/1ere arme.png">
                 </div>
         </div>
 
@@ -54,26 +55,26 @@
         <div class="barLife container-fluid">
                 <div class="row fond1">
                         <div class="col-2 bord">
-                                <p>score :</p>
+                                <p><u>Score :</u></p>
                                 <p id="playerScore">0</p>
                         </div>
                         <div class="col-2 bord">
-                                <p>santè :</p>
+                                <p><u>Santé :</u></p>
                                 <p id="playerVie">100 %</p>
                         </div>
                         <div class="col-2 bord">
                                 <img src="images/visage_vie.gif" alt="tete player" style="width:200px; height:140px;">
                         </div>
                         <div class="col-2 bord">
-                                <p>vies :</p>
+                                <p><u>Nbre vie:</u></p>
                                 <p id="nbVie"></p>
                         </div>
                         <div class="col-2 bord">
-                                <p>Argent :</p>
+                                <p><u>Argent :</u></p>
                                 <p id="playerGain">0</p>
                         </div>
                         <div class="col-2 bord">
-                                <p>Armes</p>
+                                <p><u>Armes</u></p>
                                 <p  class="text-center"><img id="iconeArme" src=""></p>
                         </div>
 

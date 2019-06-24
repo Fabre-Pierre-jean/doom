@@ -1,12 +1,34 @@
+var arme_anime=document.getElementById("arme_anime")
 
 function start(){
     myImg.onclick=mechantvie;
     setInterval("mechantdegat()",1000);
-setInterval("zoomin()",800);
-cliqueMechant2()
+    setInterval("zoomin()",800);
+    cliqueMechant2()
+    anime_hache()
     
 }
 
+
+function anime_hache(){
+    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+}
+
+function anime_pistolet(){
+    arme_change.src="../images/armes/armes_animé/pistolet.gif"
+}
+
+function anime_pompe(){
+    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+}
+
+function anime_ak47(){
+    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+}
+
+function anime_bazooka(){
+    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+}
 //armes icones
 
 var iconeArme=document.getElementById("iconeArme")
@@ -15,9 +37,9 @@ function affichageArme(){
     iconeArme.src="../images/armes/1ere arme.png"
     iconeArme.style.width="150px"; 
     iconeArme.style.height="70px"; 
-
 }
 affichageArme()
+
 //PLAYER
 
 var mechant2 = document.getElementById('mechant2');
@@ -28,22 +50,27 @@ var comptScore = -1;
 var VieMechant =  100;
 var mechantMort = 10;
 
+
+function incrementer_pistolet(){
+    comptGain = comptGain + 5;
+}
 function cliqueMechant2(){
 	comptScore++;
 	score.innerHTML = comptScore;
 	/*--------------------Score pour chaqueClique--------------------------*/
 
 	/*--------------------Gain pour chaqueClique--------------------------*/
-	if(VieMechant >= 5){//le vie ennemi 100%
+	if(VieMechant >= 5){
         VieMechant = VieMechant-5;
-		
 		comptGain++;
-		gain.innerHTML = comptGain;
+        gain.innerHTML = comptGain;
+        
 	}/*-------------------Gain apres avoir tuer le mechant---------------*/
 	else if (VieMechant == 5){
 		gain.innerHTML = comptGain;
 		VieMechant = 100;
-	}/*-----------------------------------------------------------------*/
+    }    
+    /*-----------------------------------------------------------------*/
 	/*--------------------Pour afficher les equipements-------------*/
 	if(comptGain >= acheterPistolet ){
 		pistolet.style.opacity = "1";
@@ -58,6 +85,76 @@ function cliqueMechant2(){
 		bazooka.style.opacity = "1";
 	}
 }
+
+//armes
+var pistolet = document.getElementById('pistolet');
+var pompe = document.getElementById('pompe');
+var ak47 = document.getElementById('ak47');
+var bazooka = document.getElementById('bazooka');
+var arme_change = document.getElementById("arme_change");
+var acheterPistolet = 50;/*--------------Initialisation des coûts des armes----------------*/
+var acheterPompe = 100;/*--------------Initialisation des coûts des armes----------------*/
+var acheterAk47 = 150;/*--------------Initialisation des coûts des armes----------------*/
+var acheterBazooka= 300;/*--------------Initialisation des coûts des armes----------------*/
+function arme1(){
+	if(comptGain < acheterPistolet){
+		alert('Vous n\'avez pas asser d argent');
+        pistolet.style.opacity="0.2";
+	}
+	else if(comptGain > acheterPistolet){
+		comptGain = comptGain - acheterPistolet;
+        gain.innerHTML = comptGain;
+        iconeArme.src="../images/armes/armes_animé/pistolet.gif";
+        arme_change.src="../images/armes/armes_animé/pistolet.gif";
+        gain.innerHTML = comptGain;
+	}
+}/*----------------------fonction pour pouvoir gagner les armes---------------------------------*/
+function arme2(){
+	if(comptGain < acheterPompe){
+		alert('Vous n avez pas asser d argent');
+		pompe.style.opacity="0.2";
+	}
+	else if(comptGain > acheterPompe){
+		comptGain = comptGain - acheterPompe;
+        gain.innerHTML = comptGain;
+        iconeArme.src="../images/armes/armes_animé/pompe.gif";
+        arme_change.src="../images/armes/armes_animé/pompe.gif";
+       
+		
+	}
+}/*----------------------fonction pour pouvoir gagner les armes---------------------------------*/
+function arme3(){
+	if(comptGain < acheterAk47){
+		alert('Vous n avez pas asser d argent');
+		ak47.style.opacity="0.2";
+	}
+	else if(comptGain > acheterAk47){
+		comptGain = comptGain - acheterAk47;
+		console.log('comptGain = ' +comptGain);
+        gain.innerHTML = comptGain;
+        iconeArme.src="../images/armes/armes_animé/gateline.gif";
+        arme_change.src="../images/armes/armes_animé/gateline.gif";
+		
+	}
+}/*----------------------fonction pour pouvoir gagner les armes---------------------------------*/
+function arme4(){
+	if(comptGain < acheterBazooka){
+		alert('Vous n avez pas asser d argent');
+		bazooka.style.opacity="0.2";
+	}
+	else if(comptGain > acheterBazooka){
+		comptGain = comptGain - acheterbazooka;
+		console.log('comptGain = ' +comptGain);
+        gain.innerHTML = comptGain;
+        iconeArme.src="../images/armes/armes_animé/pistolet.gif";
+        arme_change.src="../images/armes/armes_animé/pistolet.gif";
+        arme_anime.onclick=anime_pistolet;
+		
+	}
+}/*----------------------fonction pour pouvoir gagner les armes---------------------------------*/
+
+
+
 
 //Mechant normal
 
@@ -78,7 +175,6 @@ function mechantvie()
 	}
 	else
 	{
-        
     affichageviemechant.innerHTML = VieMechant+ " %";
     cliqueMechant2()
     }
@@ -106,17 +202,13 @@ function mechantdegat()
         mort_img.src="../images/mort ou fin/mort_nous.gif";
         myImg.style.display="none";
         mort_img.onclick=restart;
-        
-        
-        
+        arme_change.src=""
     }
     else
     {
     	affichagevieplayer.innerHTML = player_vie+ " %";;
-        player_vie = player_vie-5;
+        player_vie = player_vie-2;
         
-
-
     }
 }
 
@@ -142,7 +234,7 @@ function zoomin(){
 function reinit(){
     
     
-
+    
     VieMechant = 100;
     var currHeight = myImg.clientHeight;
     var currWidth = myImg.clientWidth;
@@ -157,10 +249,11 @@ function reinit(){
         changePerso()
         vieMechant = 100;
         affichageviemechant.innerHTML=vieMechant + " %"
+    
 }
 
 function reinit2(){
-    
+    if (nbrVie > 0){
     nbrVie--;
     nbVie.innerHTML=nbrVie;
 
@@ -179,13 +272,18 @@ function reinit2(){
         changePerso()
         vieMechant = 100;
         affichageviemechant.innerHTML=vieMechant + " %"
+    }
+    else if (nbrVie == 0){
+        alert("GAME OVER")
+    }
+
 }
 
 function getRandomMechant(){
-      var nbre = '123';
+      var nbre = '123456';
       var image = 'images/mechant_boss/';
       for (var z = 0; z < 1; z++ ) {
-          image += nbre[Math.floor(Math.random() * 3)] + ".gif";
+          image += nbre[Math.floor(Math.random() * 6)] + ".gif";
       }
       return image;
 }
