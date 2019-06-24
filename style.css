@@ -1,3 +1,6 @@
+img{
+	outline:0;
+}
 head{
 	margin-top: 150px;
 }
@@ -80,12 +83,13 @@ audio:hover{
 
 .arm{
     position:absolute;
-    bottom: 70px;
+	bottom: 120px;
+	margin-left: 200px;
 }
 
 #mechantImg{
 	display: flex;
-	margin-top: -332px;
+	margin-top: -240px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 40px;

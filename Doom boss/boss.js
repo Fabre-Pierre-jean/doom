@@ -1,3 +1,33 @@
+//innocent
+
+function innocent()
+{
+    var innocent= Math.floor((Math.random() * 100) + 1);
+
+    if (innocent<=40)
+    {
+        console.log("don't shoot innocent right here!")
+    }
+}
+
+//innocent();
+    
+//medikit
+
+
+function medikit()
+{
+    var medikit= Math.floor((Math.random() * 100) + 1);
+
+    if (medikit<=40 && player_vie<100)
+    {
+        console.log("medikit here!")
+    }
+}
+
+
+
+
 //BOSS
 
 var affichagevieplayer=document.getElementById('affichagevieplayer');

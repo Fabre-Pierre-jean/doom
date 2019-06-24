@@ -1,3 +1,4 @@
+
 //PLAYER
 
 var mechant2 = document.getElementById('mechant2');

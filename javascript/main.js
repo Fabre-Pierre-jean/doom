@@ -1,41 +1,51 @@
-//BOSS
-/*
-var affichagevieplayer=document.getElementById('playerScore');
-var affichagevieboss=document.getElementById('affichagevieboss');
-var boss_vie = 95;
-var boss_degat = 10;
-var player_vie = 100;
 
-function bossvie() 
-{
-	if(boss_vie<=0)
-	{
-		affichagevieboss.innerHTML = boss_vie;
-		boss_vie = 100;
+//PLAYER
+
+var mechant2 = document.getElementById('mechant2');
+var gain = document.getElementById('playerGain');
+var score = document.getElementById('playerScore');
+var comptGain = 0;
+var comptScore = 0;
+var VieMechant = 2;
+var mechantMort = 10;
+
+function cliqueMechant2(){
+	comptScore++;
+	console.log('score = ' +comptScore);
+	score.innerHTML = comptScore;
+	/*--------------------Score pour chaqueClique--------------------------*/
+
+	/*--------------------Gain pour chaqueClique--------------------------*/
+	if(VieMechant >= 1){
+		VieMechant--;
+		console.log('VieMechant = ' +VieMechant);
+		comptGain++;
+		console.log('gain = ' +comptGain)
+		gain.innerHTML = comptGain;
+	}/*-------------------Gain apres avoir tuer le mechant---------------*/
+	else if (VieMechant == 0){
+		comptGain = parseInt(comptGain) + parseInt(mechantMort);
+		console.log('comptGain = comptGain + mechantMort = ' +comptGain);
+		console.log('score = ' +comptScore);
+		gain.innerHTML = comptGain;
+		VieMechant = 3;
+		console.log ('VieMechant = ' +VieMechant);
+	}/*-----------------------------------------------------------------*/
+	/*--------------------Pour afficher les equipements-------------*/
+	if(comptGain >= acheterPistolet ){
+		pistolet.style.opacity = "1";
 	}
-	else
-	{
-        affichagevieboss.innerHTML = boss_vie;
-        boss_vie = boss_vie-5;
-    }
+	if(comptGain >= acheterPompe){
+		pompe.style.opacity = "1";
+	}
+	if(comptGain >= acheterAk47){
+		ak47.style.opacity = "1";
+	}
+	if(comptGain >= acheterBazooka){
+		bazooka.style.opacity = "1";
+	}
 }
 
-
-function bossdegat()
-{
-    if(player_vie<=0)
-    {
-        affichagevieplayer.innerHTML = player_vie;
-    	player_vie = 100;
-    }
-    else
-    {
-    	affichagevieplayer.innerHTML = player_vie;
-        player_vie = player_vie-20;
-    }
-}
-
-setInterval("bossdegat()",2000);*/
 
 //Mechant normal
 
@@ -61,15 +71,23 @@ function mechantvie()
     }
 }
 
+function restart(){
+    mort_img.src="";
+    reinit();
+}
 
+var mort_img = document.getElementById("mort_img")
 function mechantdegat()
 {
-    if(player_vie<=0)
+    if(player_vie==0)
     {
-        reinit()
+        
         affichagevieplayer.innerHTML = player_vie+ " %";;
-		player_vie = 100;
-		
+        player_vie = 100;
+        mort_img.src="../images/mort ou fin/mort_nous.gif";
+        myImg.style.display="none";
+        mort_img.onclick=restart;
+        
     }
     else
     {
@@ -77,7 +95,6 @@ function mechantdegat()
         player_vie = player_vie-5;
     }
 }
-
 setInterval("mechantdegat()",500);
 
 
