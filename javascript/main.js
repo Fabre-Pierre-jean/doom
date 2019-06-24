@@ -6,7 +6,7 @@ var gain = document.getElementById('playerGain');
 var score = document.getElementById('playerScore');
 var comptGain = 0;
 var comptScore = 0;
-var VieMechant = 2;
+var VieMechant =  100;
 var mechantMort = 10;
 
 function cliqueMechant2(){
@@ -16,19 +16,19 @@ function cliqueMechant2(){
 	/*--------------------Score pour chaqueClique--------------------------*/
 
 	/*--------------------Gain pour chaqueClique--------------------------*/
-	if(VieMechant >= 1){
-		VieMechant--;
+	if(VieMechant >= 5){//le vie ennemi 100%
+        VieMechant = VieMechant-5;
+		
 		console.log('VieMechant = ' +VieMechant);
 		comptGain++;
 		console.log('gain = ' +comptGain)
 		gain.innerHTML = comptGain;
 	}/*-------------------Gain apres avoir tuer le mechant---------------*/
 	else if (VieMechant == 0){
-		comptGain = parseInt(comptGain) + parseInt(mechantMort);
 		console.log('comptGain = comptGain + mechantMort = ' +comptGain);
 		console.log('score = ' +comptScore);
 		gain.innerHTML = comptGain;
-		VieMechant = 3;
+		VieMechant = 100;
 		console.log ('VieMechant = ' +VieMechant);
 	}/*-----------------------------------------------------------------*/
 	/*--------------------Pour afficher les equipements-------------*/
@@ -51,23 +51,25 @@ function cliqueMechant2(){
 
 var affichagevieplayer=document.getElementById('playerVie');
 var affichageviemechant=document.getElementById('affichageviemechant');
-var mechant_vie = 100;
 var mechant_degat = 10;
 var player_vie = 100;
 
 function mechantvie() 
 {
 	
-	if(mechant_vie==0)
+	if(VieMechant<5)
 	{
+
         reinit()
-        mechant_vie = 100;
-		affichageviemechant.innerHTML = mechant_vie + " %";   
+        VieMechant = 100;
+        affichageviemechant.innerHTML = VieMechant + " %"; 
+		comptGain = parseInt(comptGain) + parseInt(mechantMort);
 	}
 	else
 	{
-    affichageviemechant.innerHTML = mechant_vie+ " %";
-    mechant_vie = mechant_vie-5;
+        
+    affichageviemechant.innerHTML = VieMechant+ " %";
+    cliqueMechant2()
     }
 }
 
@@ -75,6 +77,9 @@ function restart(){
     mort_img.src="";
     reinit();
 }
+
+
+//Quand on meurt
 
 var mort_img = document.getElementById("mort_img")
 function mechantdegat()
@@ -118,7 +123,7 @@ setInterval("zoomin()",1000);
 
 function reinit(){
     player_vie = 100;
-    mechant_vie = 100;
+    VieMechant = 100;
     var currHeight = myImg.clientHeight;
     var currWidth = myImg.clientWidth;
     var debHeight = 252;

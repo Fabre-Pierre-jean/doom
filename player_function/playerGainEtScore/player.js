@@ -16,7 +16,7 @@ function cliqueMechant2(){
 	/*--------------------Score pour chaqueClique--------------------------*/
 
 	/*--------------------Gain pour chaqueClique--------------------------*/
-	if(VieMechant >= 1){
+	if(VieMechant >= 1){//le vie ennemi 100%
 		VieMechant--;
 		console.log('VieMechant = ' +VieMechant);
 		comptGain++;
