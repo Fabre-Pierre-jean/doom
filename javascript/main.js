@@ -93,9 +93,9 @@ var ak47 = document.getElementById('ak47');
 var bazooka = document.getElementById('bazooka');
 var arme_change = document.getElementById("arme_change");
 var acheterPistolet = 5;/*--------------Initialisation des coûts des armes----------------*/
-var acheterPompe = 5;/*--------------Initialisation des coûts des armes----------------*/
-var acheterAk47 = 5;/*--------------Initialisation des coûts des armes----------------*/
-var acheterBazooka= 5;/*--------------Initialisation des coûts des armes----------------*/
+var acheterPompe = 10;/*--------------Initialisation des coûts des armes----------------*/
+var acheterAk47 = 15;/*--------------Initialisation des coûts des armes----------------*/
+var acheterBazooka= 20;/*--------------Initialisation des coûts des armes----------------*/
 
 
 function arme1(){
@@ -119,7 +119,6 @@ function arme1(){
 function arme2(){
 	if(comptGain < acheterPompe){
 		alert('Vous n avez pas asser d argent');
-		pompe.style.opacity="0.2";
 	}
 	else if(comptGain > acheterPompe){
         comptGain = comptGain - acheterPompe;
@@ -137,13 +136,12 @@ function arme2(){
 function arme3(){
 	if(comptGain < acheterAk47){
 		alert('Vous n avez pas asser d argent');
-		ak47.style.opacity="0.2";
 	}
 	else if(comptGain > acheterAk47){
         comptGain = comptGain - acheterAk47;
         progressif = 10
         comptGain = progressif;
-        degatBasique = 10
+        degatBasique = 15
         afficheVieMechant()
         afficheGain();
         //iconeArme.src="../images/armes/mitraillette_icones.gif";
@@ -156,13 +154,12 @@ function arme3(){
 function arme4(){
 	if(comptGain < acheterBazooka){
 		alert('Vous n avez pas asser d argent');
-		bazooka.style.opacity="0.2";
 	}
 	else if(comptGain > acheterBazooka){
 		comptGain = comptGain - acheterBazooka;
         progressif = 5
         comptGain = progressif
-        degatBasique = 10
+        degatBasique = 20
         afficheVieMechant()
         afficheGain();
         //iconeArme.src="../images/armes/bazooka.gif";
