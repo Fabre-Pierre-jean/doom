@@ -8,7 +8,6 @@ function start(){
     setInterval("zoomin()",800);
     cliqueMechant2()
     anime_hache()
-    
 }
 
 
@@ -64,7 +63,6 @@ function cliqueMechant2(){
         VieMechant = VieMechant-degatBasique;
 		comptGain = comptGain + progressif;
         afficheGain();
-        
 	}/*-------------------Gain apres avoir tuer le mechant---------------*/
 	else if (VieMechant == 5){
 		afficheGain();
@@ -144,8 +142,8 @@ function arme3(){
         degatBasique = 15
         afficheVieMechant()
         afficheGain();
-        //iconeArme.src="../images/armes/mitraillette_icones.gif";
-        //arme_change.src="../images/armes/ak.png";
+        iconeArme.src="../images/armes/mitraillette_icones.gif";
+        arme_change.src="../images/armes/ak.png";
        
 	}
 }
@@ -162,8 +160,8 @@ function arme4(){
         degatBasique = 20
         afficheVieMechant()
         afficheGain();
-        //iconeArme.src="../images/armes/bazooka.gif";
-        //arme_change.src="../images/armes/bazooka-2.png";
+        iconeArme.src="../images/armes/bazooka.gif";
+        arme_change.src="../images/armes/bazooka-2.png";
 		
 	}
 }/*----------------------FIN fonction pour pouvoir gagner les armes---------------------------------*/
