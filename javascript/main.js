@@ -52,23 +52,22 @@ var comptGain = 0;
 var comptScore = -1;
 var VieMechant =  100;
 var mechantMort = 10;
-
-
+var degatBasique = 2
 
 function cliqueMechant2(){
 	comptScore++;
-	score.innerHTML = comptScore;
+    afficheScore();
 	/*--------------------Score pour chaqueClique--------------------------*/
 
 	/*--------------------Gain pour chaqueClique--------------------------*/
 	if(VieMechant >= 5){
-        VieMechant = VieMechant-5;
+        VieMechant = VieMechant-degatBasique;
 		comptGain = comptGain + progressif;
-        gain.innerHTML = comptGain;
+        afficheGain();
         
 	}/*-------------------Gain apres avoir tuer le mechant---------------*/
 	else if (VieMechant == 5){
-		gain.innerHTML = comptGain;
+		afficheGain();
 		VieMechant = 100;
     }    
     /*-----------------------------------------------------------------*/
@@ -107,7 +106,9 @@ function arme1(){
 	else if(comptGain > acheterPistolet){
         comptGain = comptGain - acheterPistolet;
         comptGain = progressif++
-        gain.innerHTML = comptGain;
+        degatBasique = 5
+        afficheVieMechant()
+        afficheGain();
         iconeArme.src="../images/armes/armes_animé/pistolet.gif";
         arme_change.src="../images/armes/armes_animé/pistolet.gif";
         
@@ -122,8 +123,11 @@ function arme2(){
 	}
 	else if(comptGain > acheterPompe){
         comptGain = comptGain - acheterPompe;
-        comptGain = progressif++
-        gain.innerHTML = comptGain;
+        progressif = 5
+        comptGain = progressif
+        degatBasique = 10
+        afficheVieMechant()
+        afficheGain();
         iconeArme.src="../images/armes/armes_animé/pompe.gif";
         arme_change.src="../images/armes/armes_animé/pompe.gif";
 	}
@@ -137,8 +141,11 @@ function arme3(){
 	}
 	else if(comptGain > acheterAk47){
         comptGain = comptGain - acheterAk47;
-        comptGain = progressif++
-        gain.innerHTML = comptGain;
+        progressif = 10
+        comptGain = progressif;
+        degatBasique = 10
+        afficheVieMechant()
+        afficheGain();
         //iconeArme.src="../images/armes/mitraillette_icones.gif";
         //arme_change.src="../images/armes/ak.png";
        
@@ -153,8 +160,11 @@ function arme4(){
 	}
 	else if(comptGain > acheterBazooka){
 		comptGain = comptGain - acheterBazooka;
-        gain.innerHTML = comptGain;
-        comptGain = progressif++
+        progressif = 5
+        comptGain = progressif
+        degatBasique = 10
+        afficheVieMechant()
+        afficheGain();
         //iconeArme.src="../images/armes/bazooka.gif";
         //arme_change.src="../images/armes/bazooka-2.png";
 		
@@ -162,8 +172,27 @@ function arme4(){
 }/*----------------------FIN fonction pour pouvoir gagner les armes---------------------------------*/
 
 		
+//Functions gerant affichage
 
+function afficheVieMechant(){
+    affichageviemechant.innerHTML = VieMechant+ " %";
+}
 
+function afficheNotreVie(){
+    affichagevieplayer.innerHTML = player_vie+ " %";
+}
+
+function afficheScore(){
+    score.innerHTML = comptScore;
+}
+
+function afficheGain(){
+    gain.innerHTML = comptGain;
+}
+
+function afficheNbVie(){
+    nbVie.innerHTML=nbrVie;
+}
 
 //Mechant normal
 
@@ -171,6 +200,8 @@ var affichagevieplayer=document.getElementById('playerVie');
 var affichageviemechant=document.getElementById('affichageviemechant');
 var mechant_degat = 10;
 var player_vie = 100;
+var VieMechant = 100;
+
 
 function mechantvie() 
 {
@@ -178,14 +209,13 @@ function mechantvie()
 	if(VieMechant<5)
 	{
         reinit()
-        VieMechant = 100;
-        affichageviemechant.innerHTML = VieMechant + " %"; 
+        afficheVieMechant()
 		comptGain = parseInt(comptGain) + parseInt(mechantMort);
 	}
 	else
 	{
-    affichageviemechant.innerHTML = VieMechant+ " %";
-    cliqueMechant2()
+        afficheVieMechant()
+        cliqueMechant2()
     }
 }
 
@@ -196,17 +226,18 @@ function restart(){
 
 var nbVie=document.getElementById("nbVie");
 nbrVie=3;
-nbVie.innerHTML=nbrVie;
-//Quand on meurt
+afficheNbVie()
 
-var mort_img = document.getElementById("mort_img")
+var mort_img = document.getElementById("mort_img") //Image de notre mort
+
+
 function mechantdegat()
 {
     
     if(player_vie==0)
     {
         
-        affichagevieplayer.innerHTML = player_vie+ " %";;
+        afficheNotreVie();
         player_vie = 0;
         mort_img.src="../images/mort ou fin/mort_nous.gif";
         myImg.style.display="none";
@@ -215,7 +246,7 @@ function mechantdegat()
     }
     else
     {
-    	affichagevieplayer.innerHTML = player_vie+ " %";;
+        afficheNotreVie();
         player_vie = player_vie-2;
         
     }
@@ -257,14 +288,14 @@ function reinit(){
         myImg.style.height= "45px" ;  
         changePerso()
         vieMechant = 100;
-        affichageviemechant.innerHTML=vieMechant + " %"
+        afficheVieMechant();
     
 }
 
 function reinit2(){
     if (nbrVie > 0){
     nbrVie--;
-    nbVie.innerHTML=nbrVie;
+    afficheNbVie();
 
     player_vie = 100;
     VieMechant = 100;
@@ -280,10 +311,10 @@ function reinit2(){
         myImg.style.height= "45px" ;  
         changePerso()
         vieMechant = 100;
-        affichageviemechant.innerHTML=vieMechant + " %"
-    }
+        afficheVieMechant()
+}
     else if (nbrVie == 0){
-        alert("GAME OVER")
+        alert("GAME OVER")//trouver image GAME OVER
     }
 
 }
