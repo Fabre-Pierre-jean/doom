@@ -4,7 +4,7 @@ var progressif = 1
 
 function start(){
     myImg.onclick=mechantvie;
-    setInterval("mechantdegat()",1000);
+    setInterval("mechantdegat()",800);
     setInterval("zoomin()",800);
     cliqueMechant2()
     anime_hache()
@@ -94,7 +94,7 @@ var acheterPistolet = 5;/*--------------Initialisation des coûts des armes-----
 var acheterPompe = 10;/*--------------Initialisation des coûts des armes----------------*/
 var acheterAk47 = 15;/*--------------Initialisation des coûts des armes----------------*/
 var acheterBazooka= 20;/*--------------Initialisation des coûts des armes----------------*/
-
+var audio =document.getElementById("audio")
 
 function arme1(){
 	if(comptGain < acheterPistolet){
@@ -109,7 +109,6 @@ function arme1(){
         afficheGain();
         iconeArme.src="../images/armes/armes_animé/pistolet.gif";
         arme_change.src="../images/armes/armes_animé/pistolet.gif";
-        
 	}
 }
 
@@ -242,7 +241,7 @@ function mechantdegat()
     else
     {
         afficheNotreVie();
-        player_vie = player_vie-2;
+        player_vie = player_vie-5;
         
     }
 }
