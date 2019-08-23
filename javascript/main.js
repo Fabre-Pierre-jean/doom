@@ -12,7 +12,7 @@ function start(){
 
 
 function anime_hache(){
-    arme_change.src=".mages/armes/armes_animé/1ere arme.gif"
+    arme_change.src="images/armes/armes_animé/1ere arme.gif"
 }
 
 function anime_pistolet(){
