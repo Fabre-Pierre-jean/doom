@@ -236,7 +236,7 @@ function mechantdegat()
         mort_img.src="../images/mort ou fin/mort_nous.gif";
         myImg.style.display="none";
         mort_img.onclick=restart;
-        arme_change.src=""
+        arme_change.style.display="none"
     }
     else
     {
