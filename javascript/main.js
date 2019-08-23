@@ -12,30 +12,30 @@ function start(){
 
 
 function anime_hache(){
-    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+    arme_change.src=".mages/armes/armes_animé/1ere arme.gif"
 }
 
 function anime_pistolet(){
-    arme_change.src="../images/armes/armes_animé/pistolet.gif"
+    arme_change.src="images/armes/armes_animé/pistolet.gif"
 }
 
 function anime_pompe(){
-    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+    arme_change.src="images/armes/armes_animé/1ere arme.gif"
 }
 
 function anime_ak47(){
-    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+    arme_change.src="images/armes/armes_animé/1ere arme.gif"
 }
 
 function anime_bazooka(){
-    arme_change.src="../images/armes/armes_animé/1ere arme.gif"
+    arme_change.src="images/armes/armes_animé/1ere arme.gif"
 }
 //armes icones
 
 var iconeArme=document.getElementById("iconeArme")
 
 function affichageArme(){
-    iconeArme.src="../images/armes/1ere arme.png"
+    iconeArme.src="images/armes/1ere arme.png"
     iconeArme.style.width="150px"; 
     iconeArme.style.height="70px"; 
 }
@@ -91,9 +91,9 @@ var ak47 = document.getElementById('ak47');
 var bazooka = document.getElementById('bazooka');
 var arme_change = document.getElementById("arme_change");
 var acheterPistolet = 5;/*--------------Initialisation des coûts des armes----------------*/
-var acheterPompe = 10;/*--------------Initialisation des coûts des armes----------------*/
-var acheterAk47 = 15;/*--------------Initialisation des coûts des armes----------------*/
-var acheterBazooka= 20;/*--------------Initialisation des coûts des armes----------------*/
+var acheterPompe = 50;/*--------------Initialisation des coûts des armes----------------*/
+var acheterAk47 = 150;/*--------------Initialisation des coûts des armes----------------*/
+var acheterBazooka= 300;/*--------------Initialisation des coûts des armes----------------*/
 var audio =document.getElementById("audio")
 
 function arme1(){
@@ -107,8 +107,8 @@ function arme1(){
         degatBasique = 5
         afficheVieMechant()
         afficheGain();
-        iconeArme.src="../images/armes/armes_animé/pistolet.gif";
-        arme_change.src="../images/armes/armes_animé/pistolet.gif";
+        iconeArme.src="images/armes/armes_animé/pistolet.gif";
+        arme_change.src="images/armes/armes_animé/pistolet.gif";
 	}
 }
 
@@ -124,8 +124,8 @@ function arme2(){
         degatBasique = 10
         afficheVieMechant()
         afficheGain();
-        iconeArme.src="../images/armes/armes_animé/pompe.gif";
-        arme_change.src="../images/armes/armes_animé/pompe.gif";
+        iconeArme.src="images/armes/armes_animé/pompe.gif";
+        arme_change.src="images/armes/armes_animé/pompe.gif";
 	}
 }
 
@@ -141,8 +141,8 @@ function arme3(){
         degatBasique = 15
         afficheVieMechant()
         afficheGain();
-        iconeArme.src="../images/armes/mitraillette_icones.gif";
-        arme_change.src="../images/armes/ak.png";
+        iconeArme.src="images/armes/mitraillette_icones.gif";
+        arme_change.src="images/armes/ak.png";
        
 	}
 }
@@ -159,8 +159,8 @@ function arme4(){
         degatBasique = 20
         afficheVieMechant()
         afficheGain();
-        iconeArme.src="../images/armes/bazooka.gif";
-        arme_change.src="../images/armes/bazooka-2.png";
+        iconeArme.src="images/armes/bazooka.gif";
+        arme_change.src="images/armes/bazooka-2.png";
 		
 	}
 }/*----------------------FIN fonction pour pouvoir gagner les armes---------------------------------*/
@@ -233,7 +233,7 @@ function mechantdegat()
         
         afficheNotreVie();
         player_vie = 0;
-        mort_img.src="../images/mort ou fin/mort_nous.gif";
+        mort_img.src="images/mort ou fin/mort_nous.gif";
         myImg.style.display="none";
         mort_img.onclick=restart;
         arme_change.src=""
