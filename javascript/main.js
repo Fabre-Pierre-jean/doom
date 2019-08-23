@@ -223,7 +223,7 @@ nbrVie=3;
 afficheNbVie()
 
 var mort_img = document.getElementById("mort_img") //Image de notre mort
-
+var armes=document.getElementById("armes")
 
 function mechantdegat()
 {
@@ -237,6 +237,7 @@ function mechantdegat()
         myImg.style.display="none";
         mort_img.onclick=restart;
         arme_change.src=""
+	armes.style.display="none"
     }
     else
     {
