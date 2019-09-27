@@ -91,9 +91,9 @@ var ak47 = document.getElementById('ak47');
 var bazooka = document.getElementById('bazooka');
 var arme_change = document.getElementById("arme_change");
 var acheterPistolet = 5;/*--------------Initialisation des coûts des armes----------------*/
-var acheterPompe = 10;/*--------------Initialisation des coûts des armes----------------*/
-var acheterAk47 = 15;/*--------------Initialisation des coûts des armes----------------*/
-var acheterBazooka= 20;/*--------------Initialisation des coûts des armes----------------*/
+var acheterPompe = 50;/*--------------Initialisation des coûts des armes----------------*/
+var acheterAk47 = 150;/*--------------Initialisation des coûts des armes----------------*/
+var acheterBazooka= 300;/*--------------Initialisation des coûts des armes----------------*/
 var audio =document.getElementById("audio")
 
 function arme1(){
